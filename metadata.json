@@ -1,0 +1,18 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Authors": [
+            {
+                "Name": "500Byte"
+            }
+        ],
+        "Category": "Utilities",
+        "Description": "Advanced Cloudflare WARP controller for Plasma 6. Manage VPN connection, systemd service and autostart in one place.",
+        "Icon": "network-vpn",
+        "Id": "com.500byte.warp-widget",
+        "Name": "WARP Center",
+        "Version": "1.0.0",
+        "Website": "https://github.com/500Byte/warp-widget"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0"
+}
