@@ -146,14 +146,15 @@ PlasmoidItem {
                 }
 
                 Rectangle {
-                    height: Kirigami.Units.gridUnit * 0.9
-                    width: statusPillText.implicitWidth + Kirigami.Units.smallSpacing * 3
+                    height: statusPillText.implicitHeight + Kirigami.Units.smallSpacing * 2
+                    width: statusPillText.implicitWidth + Kirigami.Units.smallSpacing * 2
                     radius: height / 2
+
                     color: root.isVpnConnected
-                           ? Kirigami.Theme.positiveBackgroundColor
-                           : (root.isServiceActive
-                              ? Kirigami.Theme.neutralBackgroundColor
-                              : Kirigami.Theme.negativeBackgroundColor)
+                    ? Kirigami.Theme.positiveBackgroundColor
+                    : (root.isServiceActive
+                    ? Kirigami.Theme.neutralBackgroundColor
+                    : Kirigami.Theme.negativeBackgroundColor)
 
                     Behavior on color { ColorAnimation { duration: 400 } }
 
@@ -161,14 +162,14 @@ PlasmoidItem {
                         id: statusPillText
                         anchors.centerIn: parent
                         text: root.isVpnConnected ? "● Activo" :
-                              (root.isServiceActive ? "○ Desconectado" : "✕ Detenido")
+                        (root.isServiceActive ? "○ Desconectado" : "✕ Detenido")
                         font.pixelSize: Kirigami.Units.gridUnit * 0.6
                         font.weight: Font.Medium
                         color: root.isVpnConnected
-                               ? Kirigami.Theme.positiveTextColor
-                               : (root.isServiceActive
-                                  ? Kirigami.Theme.neutralTextColor
-                                  : Kirigami.Theme.negativeTextColor)
+                        ? Kirigami.Theme.positiveTextColor
+                        : (root.isServiceActive
+                        ? Kirigami.Theme.neutralTextColor
+                        : Kirigami.Theme.negativeTextColor)
                         Behavior on color { ColorAnimation { duration: 300 } }
                     }
                 }
